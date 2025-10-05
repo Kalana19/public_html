@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Review</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Review Box */
+        .review-box {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 600px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .input-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* Rating */
+        .rating {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+            color: #ddd;
+            margin-right: 5px;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: gold;
+        }
+
+        /* Image Upload */
+        .image-upload-section {
+            margin-top: 20px;
+        }
+
+        .image-upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #uploaded-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .image-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        #upload-image,
+        #remove-image {
+            padding: 8px 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #upload-image {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #remove-image {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* Buttons */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .cancel-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+
+        .back-btn {
+            background-color: #ccc;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="review-box">
+            <h1>Submit a Review</h1>
+            <form>
+                <div class="input-group">
+                    <label for="product-title">Product Title</label>
+                    <input type="text" id="product-title" placeholder="Enter product title">
+                </div>
+                <div class="input-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter your review here"></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label>Rating</label>
+                    <div class="rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+                <div class="input-group image-upload-section">
+                    <label>Image</label>
+                    <div class="image-upload">
+                        <img src="https://via.placeholder.com/150" alt="Uploaded Image" id="uploaded-image">
+                        <div class="image-actions">
+                            <button type="button" id="upload-image">Upload</button>
+                            <button type="button" id="remove-image">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <a href="Review_List_Page.html">
+                        <button type="button" class="back-btn">Back to Reviews</button>
+                    </a>
+                    <a href="Review_List_Page.html">
+                        <button type="button" class="submit-btn">Submit</button>
+                    </a>
+                    <a href="Review_List_Page.html">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

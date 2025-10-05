@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        .field label {
+            font-size: 16px;
+            color: #333;
+        }
+        .field input[type="text"], 
+        .field textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .field textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .image-container button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .rating {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .rating span {
+            font-size: 24px;
+            color: gold;
+        }
+        .rating span.inactive {
+            color: #ddd;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .buttons button.cancel {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Edit Review
+        </div>
+        
+        <form>
+            <div class="field">
+                <label for="product-title">Product Title</label>
+                <input type="text" id="product-title" placeholder="Enter product title">
+            </div>
+            
+            <div class="field">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Enter review description"></textarea>
+            </div>
+            
+            <div class="image-container">
+                <img src="https://via.placeholder.com/150" alt="Image preview">
+                <div>
+                    <button type="button">Upload</button>
+                    <button type="button">Remove</button>
+                </div>
+            </div>
+            
+            <div class="rating">
+                <label for="rating">Rating</label><br>
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="inactive">☆</span>
+            </div>
+        </form>
+
+        <!-- Save Changes button wrapped in an anchor -->
+        <div class="buttons">
+            <a href="Review_Detail_Page.html">
+                <button type="button">Save Changes</button>
+            </a>
+            <a href="Review_List_Page.html">
+                <button type="button" class="cancel">Cancel</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
